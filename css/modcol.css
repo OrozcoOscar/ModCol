@@ -1,0 +1,185 @@
+body{
+	overflow: hidden;
+}
+header{
+	background-color: #4C4C4C;
+	height: 74px;
+}
+#canvas{
+	
+	position: absolute;
+	float: right;
+	left: 4%;
+	top: 74px;
+	
+	
+}
+
+#name_modelo{
+	position:absolute;
+	z-index: 99;
+	color: white;
+	font-size: 23px;
+	left:54px; 
+	top: 74px;
+	width: 304px;
+	background-color: #4C4C4C;
+	padding: 9px;
+	text-align: center;
+}
+#herramientas{
+	position:relative;
+	display:flex;
+	top: 150px;
+	float: left;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	z-index: 99;
+	/*--------------------*/
+	padding: 9px;
+	width:50px;
+	min-height:auto;	
+}
+#herramientas button{
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	border:solid .9px white;
+	-webkit-background-size: 22px 22px !important;
+	background-size: 22px 22px !important;
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+	background-color: #57585d ;
+	border-radius: 7px;
+}
+#herramientas button:hover{
+	background-color: #1e8bc5 !important;
+}
+
+#opciones{
+	
+
+	position: relative;
+	display:none;
+	background-color: #57585d;
+	float: left;
+	width: 73px;
+	height: auto;
+	border: solid 1px;
+	border-radius: 7px;
+	padding: 7px;
+	color: black;
+	z-index: 999;
+
+
+}
+#opciones button{
+	width: 100%;
+}
+#obj{
+	color: white;
+}
+
+.class{
+	display: none;
+}
+.pack{
+	display: none;
+}
+
+.zoom{
+	display: flex;
+	flex-direction:column;
+	position: relative;
+	background-color: #57585d;
+	border-radius: 4px;
+	z-index: 99;
+	float:right;
+	top:69vh;
+	padding: 3px;
+	color: white;
+}
+.zoom button:hover{
+	background-color: #65A5EE;
+	color: white;
+	border-radius: 3px;
+	border:none;
+	cursor: pointer;
+}
+.zoom button{
+	margin: 3px;
+	padding:4px;
+	color: #B0B0B0;
+	width: 32px;
+	height:auto;
+	font-size: 32px;
+	background-color: #FFFFFF;
+}
+.line,.class,.pack{
+	display: none;
+}
+@media screen and (max-width:540px){
+   header{
+    height: auto !important;
+    display: flex;
+    flex-flow: row wrap;
+    width:100%;
+   }
+   header nav{
+   	width: 100%;
+   } 
+   canvas{
+   	margin-top: 39% !important;
+   	width:  100% !important;
+   	height:   180vh !important;
+   }
+   #name_modelo{
+   	top: 26% !important;
+   }
+   body{
+   	overflow-x:none;
+   }
+
+}
+
+.chat_content{
+			width: 100%;
+
+
+		}
+		.mensajes{
+			width: 90%;
+			height: 49vh;
+			background-color: #9D9D9D;
+			padding:9px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		.chat_content input{
+			width:100%;
+		}
+		.mensajes p{
+			width: 99%;
+			margin: 9px;
+			display: block;
+			display: flex;
+			flex-direction: column;
+		}
+		.mensajes span{
+			-webkit-appearance: textfield;
+			padding: 2px;
+			    word-break: break-all;
+		}
+		.mensajes .name_user{
+			display: block;
+			color: #46DB69;
+			width: 50%;
+			background: white;
+			padding: 9px;
+			border-radius: 4px;
+		}
+		.mensajes .name_user>span{
+			color: gray;
+			background: white;
+		}
+

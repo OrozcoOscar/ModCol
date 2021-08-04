@@ -1,0 +1,195 @@
+.contain{
+display: flex;
+justify-content: space-;
+padding-top:79px;
+}
+.new{
+	width: 80px;
+	height: 80px;
+	text-align: center center;
+	font-size: 49px;
+	border-radius: 99px;
+	border:solid .9px;
+	position: absolute;
+	bottom:8px;
+	z-index: 99;
+	box-shadow: 0px 1px 2px 0px;
+
+}
+.new:hover{
+	border-radius: 99px;
+	background-color: #4F86F5;
+}
+.users{
+	border: solid .9px;
+	width: 19%;
+	padding: 4px;
+}
+.users input{
+	width: 70%;
+	margin: 4px 2px;
+}
+.users input[type="submit"]{
+	width: 20%;
+	margin: 4px 2px;
+	height: 37px;
+	float: right;
+	background-color: #FFFFFF !important;
+	color: grey !important;
+	font-size: 10px;
+	padding: 2px;
+
+}
+.users input[type="submit"]:hover{
+	background-color: #2d2d2d !important;
+	color: white !important;
+}
+.users .user{
+	border: solid .9px;
+	background-color: white;
+	color: #9E9E9E;
+	width: 89%;
+	margin: 4px;
+	padding: 4px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+#IMPORTAR{
+	background-color: #4DD94A !important;
+	color: white;
+}
+.mis_modelos{
+	width: 80%;
+	min-height: 500px;
+	max-height: 80vh;
+	overflow-y: auto;
+	display: flex;
+	flex-flow:row wrap;
+	justify-content: space-between
+
+}
+.models{
+	cursor: pointer;
+	background-color: white;
+	width: auto;
+	max-width:200px;
+	margin: 5px;
+	padding: 5px;
+	min-height: 90px;
+	max-height: 100px;
+	box-shadow: 0px 1px 2px 0px;
+	text-align: justify-all;
+
+}
+.models:hover{
+	background-color: #5B99F5;
+	color: white;
+}
+.models .cerrar{
+	width: 22px;
+	height: 22px;
+	float: right;
+}
+.create, .invitar{
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	z-index: 9999;
+	background: #36363694;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.create .modelos_d,.invitar .modelos_d{
+	width: 40%;
+	min-height: 100px;
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0px 1px 2px 0px;
+	padding: 9px;
+}
+.create .cerrar,.invitar .cerrar{
+	float: right;
+}
+.create .modelos_d .t,.invitar .modelos_d .it{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+.create .modelos_d .t button{
+	height: 40px;
+	border:solid .9px;
+	
+}
+
+.res_models>button{
+	width: 100%;
+	height: 44px;
+	font-size: 32px;
+}
+
+header{
+	background-color: #4C4C4C;
+	height: 74px;
+}
+.search:hover{
+	background-color: #2d2d2d !important;
+	color: white !important;
+}
+.res_models .models{
+	width: 90%;
+}
+@media screen and (min-width:560px) and (max-width:1030px){
+
+   .contain{
+	width: 100%!important;
+   }
+	
+	.mis_modelos{
+		width: 100% !important;
+
+	}
+	.models{
+		width: 40% !important;
+		max-width: none;
+	}
+	.users{
+		width: 100% !important;
+	}
+	.new{
+		position: fixed;
+		right: 9px;
+	}
+}
+@media screen and (max-width:640px){
+   header{
+    height: auto !important;
+    display: flex;
+    flex-flow: row wrap;
+    width:100%;
+   }
+   header nav{
+   	width: 100%;
+   }
+   .contain{
+	width: 100%!important;
+	margin-top: 23% !important;
+   }
+	
+	.mis_modelos{
+		width: 100% !important;
+
+	}
+	.models{
+		width: 40% !important;
+		max-width: none;
+	}
+	.users{
+		width: 100% !important;
+	}
+	.new{
+		position: fixed;
+		right: 9px;
+	}
+}

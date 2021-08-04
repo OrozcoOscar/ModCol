@@ -1,0 +1,38 @@
+.data{
+	width: 70%;
+	height: auto;
+	border-radius: 6px;
+	box-shadow: 0px 1px 2px 1px;
+	padding: 9px;
+	margin-top: 10% !important;
+}
+.data input{
+	border:solid 1px;
+	border-radius: 6px;
+	background-color: white;
+	color: gray;
+	width: 90%;
+	height: 32px;
+	display: block;
+	margin:9px;
+}
+input[type="submit"]{
+	background-color: #4F86F5;
+	color: white;
+}
+input[type="submit"]:hover{
+	cursor: pointer
+}
+span{
+	color: #4F86F5;
+	font-size: 32px;
+}
+#letra{
+	display: inline-block;
+	width: 80px;
+	height:80px;
+	border-radius: 90px;
+	color: white;
+	font-size: 60px;
+	background-color: #4F86F5;
+}

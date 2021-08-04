@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'open sans';
+}
+body{background:black;
+    color: white;
+    }
+
+.contenedor{
+    padding: 100px 0px;
+    width: 800px;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo{
+    color: #FFFFFF;
+}
+
+/* header*/
+
+header{
+        width: 100%;
+        height: 600px;
+        background: #000000;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, hsla(0, 0%, 26%, 0.534), rgba(121, 108, 108, 0.61)), url( ../imagenes/fondo-min.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, hsla(0, 0%, 26%, 0.534), rgba(121, 108, 108, 0.61)), url( ../imagenes/fondo-min.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+}
+
+nav{
+
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+.important{
+
+    background: black;
+    padding: 5px;
+}
+.important:hover{
+    background: white;
+    color: black;
+}
+nav a{
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin-right: 10;
+ 
+
+}
+nav a:before {
+  content:"";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 1s ease;
+}
+nav a:hover:before {
+width: 100%;
+}
+
+header .textos-header{
+
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* about us*/
+
+.contenedor-sobre-nosotros{
+
+    display: flex;
+    justify-content: space-evenly;
+}
+.miniatura{
+    width: 40%;
+}
+
+.descripcion h3{
+    margin-bottom: 15px;
+    padding: 0 30px 30px 15px;
+    font-weight: 300p;
+    text-align: justify;
+}
+.descripcion h3 span{
+   background: rgb(51, 51, 253);
+   color: white;
+   border-radius: 50%;
+   display: inline-block;
+   text-align: center;
+   width: 30px;
+   height: 30px;
+   padding: 2px;
+   box-shadow: 0 0 6px 0 black;
+   margin-right: 5px;
+}
+
+.servicios{
+    background: hsl(0, 0%, 26%);
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.servicios h3{
+    margin: 12px;
+    font-weight: 300;
+    text-align: justify;
+    
+}
+.foto{
+    width: 60%;
+}
+
+/* footer */
+.contactos{
+    width: 5%;
+}
+
+footer{
+    padding: 60px 0 30px 0;
+    margin: auto;
+
+}
+
+.contenedor-footer{
+
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+
+    border-bottom: 1px solid gray;
+}
+.content-foot h4{
+
+    border-bottom: 2px solid gray ;
+    padding-bottom: 5px;
+    margin-bottom: 4px;
+    width: 150px;
+    
+}
+@media screen and (max-width:540px){
+    .contenedor {
+        display: flex;
+        flex-flow:row wrap;
+        justify-content: space-around;
+    }
+    .contenedor div{
+        padding: 22px;
+        display: flex;
+      flex-flow:row wrap;
+        width: 100%;
+        background-color: grey;
+          justify-content: space-around;
+    }
+   .contenedor{
+    width: 100%;
+    text-align: center;
+   }
+ .contenedor img{
+     width: 90%;
+   }
+}
