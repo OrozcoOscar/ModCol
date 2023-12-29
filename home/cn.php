@@ -1,6 +1,6 @@
 <?php 
-error_reporting(0);
-$c =mysqli_connect("localhost","id13984700_black_panter239","^ku%K pan de queso f+9_$!7rhS","id13984700_modelos");
+
+$c =mysqli_connect("localhost","root","","modelos");
 if($c);
 else echo "100";
 

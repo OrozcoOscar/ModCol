@@ -1,5 +1,4 @@
 <?php 
-error_reporting(0);
 session_start();
 include "cn.php";
 $id=$_SESSION['user_code'];

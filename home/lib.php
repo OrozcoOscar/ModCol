@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+
 function dell_element($string,$id){
 	error_reporting(0);
 	$res="";

@@ -1,5 +1,4 @@
 <?php 
-error_reporting(0);
 session_start();
 include "cn.php";
 $id=$_SESSION['user_code'];
@@ -59,7 +58,7 @@ echo ".user_code$id{
 		<a href="index.php" class="logo"><img src="../imagenes/logo.jpg" alt=""><span>MODCOL</span></a>
 			<nav>
                     <a href="./" >Inicio</a>
-                    <a href="perfil.php" >Perfil</a>
+                    <a href="#" >Perfil</a>
                    
                 </nav>
 	</header>

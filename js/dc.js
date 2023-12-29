@@ -6,14 +6,11 @@ class Clase extends Obj{
 	}
 	edit_variable(i,pv=null,e){
 		if (pv!=null) {
-			let txt=prompt("Ingresa el nuevo valor ",this.variables[pv]);
-			try{
+			let txt=prompt("Ingresa el nuevo valor ");
 			if(txt.length>0){
-					this.variables[pv]=txt;
-					actualizar();
-				}
-			}catch(e){}
-			
+			this.variables[pv]=txt;
+			actualizar();
+			}
 		}else{
 			let salida="<h3>Escoje la variable a editar</h3><br>";
 			this.variables.map((e,p)=>{
@@ -26,14 +23,11 @@ class Clase extends Obj{
 	}
 	edit_metodo(i,pv=null,e){
 		if (pv!=null) {
-			let txt=prompt("Ingresa el nuevo valor ",this.metodos[pv]);
-			try{
-				if(txt.length>0){
+			let txt=prompt("Ingresa el nuevo valor ");
+			if(txt.length>0){
 			this.metodos[pv]=txt;
 			actualizar();
 			}
-		}catch(e){}
-			
 		}else{
 			let salida="<h3>Escoje la metodo a editar</h3><br>";
 			this.metodos.map((e,p)=>{
@@ -88,39 +82,27 @@ class Clase extends Obj{
 	}
 	set_nombre(){
 		let n=prompt("Ingrese el nombre");
-		try{
-			this.nombre=n[0].toUpperCase()+n.substr(1)
-		}catch(e){}
-		
+		this.nombre=n[0].toUpperCase()+n.substr(1)
 		actualizar()
 	}
 	set_variable(){
 		let v=prompt("Ingrese el nombre de la variable");
-		try{
-			this.variables.push("- "+v)
-		}catch(e){}
-			
+			this.variables.push(v)
 			if(this.variables.length>1){
-				if(this.metodos.length>1)this.h+=font_size
+				this.h+=(this.h+this.w)/4;
+				this.w+=(this.h+this.w)/4;
+
 			}
 	actualizar()
 	}
 	set_metodo(){
 		let m=prompt("Ingrese el nombre del metodo");
-		try{
-			this.metodos.push("- "+m)
-		}catch(e){}
-			
-			if(this.metodos.length>1)this.h+=font_size
+			this.metodos.push(m)
+			if(this.metodos.length>1)this.h+=20
 	actualizar()
 	}
 	duplicate(){
-		let myClass=new Clase(this.type,++N,10+this.x,10+this.y,this.w,this.h,this.nombre,this.color);
-		let m=Array(this.metodos).toString().split(",")
-		let v=Array(this.variables).toString().split(",")
-		myClass.set_metodos(m)
-		myClass.set_variables(v)
-		obj.push(myClass)
+		obj.push(new Clase(this.type,++N,10+this.x,10+this.y,this.w,this.h,this.nombre,this.color))
 		actualizar()
 	}
 	paint(){
@@ -138,8 +120,8 @@ class Clase extends Obj{
 		if(this.nombre.length>max){
 				max=this.nombre.length;
 			}
-		if(this.w<(max)*font_size)this.w=(max)*font_size;
-		if(this.h<(this.variables.length+this.metodos.length+2)*font_size)this.h=(this.variables.length+this.metodos.length+2)*font_size;
+		if(this.w<(max)*20)this.w=(max)*20;
+		if(this.h<(this.variables.length+this.metodos.length+2)*20)this.h=(this.variables.length+this.metodos.length+2)*20;
 		
 		ctx.fillStyle="white";
 		ctx.fillRect(this.x,this.y,this.w,this.h);
@@ -150,16 +132,16 @@ class Clase extends Obj{
 		ctx.fillRect(this.x,this.y+24,this.w,2);//name line
 		if(this.help)ctx.strokeRect(this.w+this.x,this.h+this.y,15,15);//resize
 		//------------------------------NAME-------------------------------------------
-		ctx.font="bold "+font_size+"px sans-serif";
-		ctx.fillText("	"+this.nombre,this.x+5,(this.y+font_size));//NAME
+		ctx.font="bold 20px sans-serif";
+		ctx.fillText("	"+this.nombre,this.x+5,(this.y+20));//NAME
 		//--------------------------------vars-------------------------------------------------
-		ctx.fillRect(this.x,this.y+24+this.variables.length*font_size+4,this.w,2);//var line
+		ctx.fillRect(this.x,this.y+24+this.variables.length*20+4,this.w,2);//var line
 		for (let i = 0; i < this.variables.length; i++) {
-				ctx.fillText(this.variables[i],this.x+5,(this.y+24)+i*font_size+font_size);
+				ctx.fillText(this.variables[i],this.x+5,(this.y+24)+i*20+20);
 		}
 		//----------------------------------Methods-------------------------------------
 		for (let i = 0; i < this.metodos.length; i++) {
-			ctx.fillText(this.metodos[i]+"()",this.x+5,(this.y+24+this.variables.length*font_size+4)+i*font_size+font_size);
+			ctx.fillText(this.metodos[i]+"()",this.x+5,(this.y+24+this.variables.length*20+4)+i*20+20);
 		}
 		
 		
@@ -189,7 +171,7 @@ class Pack extends Obj {
 		ctx.strokeRect(this.x,this.y,this.w,this.h);
 		ctx.strokeRect(this.x,this.y-30,this.w/3,30);//pestaña
 		if(this.help)ctx.strokeRect(this.w+this.x,this.h+this.y,15,15);//resize
-		ctx.font="bold font_sizepx sans-serif";
+		ctx.font="bold 20px sans-serif";
 		ctx.fillText(this.nombre,this.x+this.w/3,this.y+this.h/12);
 	}
 }
@@ -226,9 +208,9 @@ class Agregacion extends Line{
 		ctx.translate(this.x,this.y)
 		ctx.rotate(m(this.x,this.y,this.xf,this.yf)+grad(45*3))
 		ctx.translate(-(this.x),-(this.y))
-		ctx.strokeRect(this.x,this.y,font_size,font_size);
+		ctx.strokeRect(this.x,this.y,20,20);
 		ctx.fillStyle="white";
-		ctx.fillRect(this.x,this.y,font_size,font_size);
+		ctx.fillRect(this.x,this.y,20,20);
 		ctx.restore()
 		
 		ctx.stroke();
@@ -263,9 +245,9 @@ class Composicion extends Line{
 		ctx.translate(this.x,this.y)
 		ctx.rotate(m(this.x,this.y,this.xf,this.yf)+grad(45*3))
 		ctx.translate(-(this.x),-(this.y))
-		ctx.strokeRect(this.x,this.y,font_size,font_size);
+		ctx.strokeRect(this.x,this.y,20,20);
 		ctx.fillStyle="black";
-		ctx.fillRect(this.x,this.y,font_size,font_size);
+		ctx.fillRect(this.x,this.y,20,20);
 		ctx.restore()
 		ctx.moveTo(this.x,this.y);
 		ctx.lineTo(this.xf,this.yf);

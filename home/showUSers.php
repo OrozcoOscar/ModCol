@@ -1,5 +1,4 @@
 <?php 
-error_reporting(0);
 if(empty($_POST)){
  	echo "404";
  }else{

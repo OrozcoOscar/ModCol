@@ -192,9 +192,6 @@ input{
 .icon-chat{
 	background-image: url(../imagenes/icons/chat.png) !important;
 }
-.icon-ovalo{
-	background-image: url(../imagenes/icons/ovalo.png) !important;
-}
 @media screen and (max-width:540px){
    header{
     height: auto;

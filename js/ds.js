@@ -21,8 +21,8 @@ class Caja extends Obj{
 		ctx.strokeRect(this.x,this.y,this.w,this.h);
 		if(this.help)ctx.strokeRect(this.w+this.x,this.h+this.y,15,15);//resize
 		//------------------------------NAME-------------------------------------------
-		ctx.font="bold "+font_size+"px sans-serif";
-		ctx.fillText("	"+this.nombre,this.x+5,this.y+font_size+2);//NAME
+		ctx.font="bold 20px sans-serif";
+		ctx.fillText("	"+this.nombre,this.x+5,this.y+22);//NAME
 		//--------------------------------vars-------------------------------------------------
 	}
 }
@@ -46,8 +46,8 @@ class Skin extends Obj {
 		if(this.help)ctx.fillRect(this.w+this.x,this.h+this.y,15,15);//resize
 		ctx.fillStyle=this.color;
 		if(this.help)ctx.strokeRect(this.w+this.x,this.h+this.y,15,15);//resize
-		ctx.font="bold "+font_size+10+"px sans-serif";
-		ctx.fillText(this.nombre,this.x-15,this.y+this.h+font_size+9);
+		ctx.font="bold "+30+"px sans-serif";
+		ctx.fillText(this.nombre,this.x-15,this.y+this.h+29);
 		var img = new Image();
 		img.src = '../imagenes/skin.png';
 		ctx.drawImage(img, this.x,this.y,this.w,this.h);

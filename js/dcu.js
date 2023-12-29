@@ -13,11 +13,6 @@ class Ovalo extends Obj{
 		actualizar()
 	}
 	paint(){
-		let max=5;
-		if(this.nombre.length>max){
-				max=this.nombre.length;
-			}
-		if(this.w<(max)*8)this.w=(max)*8;
 		ctx.fillStyle="white";
 
 		if (this.w<49) {this.w=49}
@@ -29,8 +24,8 @@ class Ovalo extends Obj{
 		if(this.help)ctx.strokeRect(this.w+this.x,this.h+this.y,15,15);//resize
 		
 		//------------------------------NAME-------------------------------------------
-		ctx.font="bold "+font_size+"px sans-serif";
-		ctx.fillText("	"+this.nombre,this.x+10,this.y+font_size+2);//NAME
+		ctx.font="bold 20px sans-serif";
+		ctx.fillText("	"+this.nombre,this.x+this.w/3,this.y+22);//NAME
 		//--------------------------------vars-------------------------------------------------
 		
 	}
@@ -50,11 +45,6 @@ class Caja extends Obj{
 		actualizar()
 	}
 	paint(){
-		let max=5;
-		if(this.nombre.length>max){
-				max=this.nombre.length;
-			}
-		if(this.w<(max)*10)this.w=(max)*10;
 		ctx.fillStyle="white";
 		ctx.fillRect(this.x,this.y,this.w,this.h);
 		if(this.help)ctx.fillRect(this.w+this.x,this.h+this.y,15,15);//resize
@@ -63,8 +53,8 @@ class Caja extends Obj{
 		ctx.strokeRect(this.x,this.y,this.w,this.h);
 		if(this.help)ctx.strokeRect(this.w+this.x,this.h+this.y,15,15);//resize
 		//------------------------------NAME-------------------------------------------
-		ctx.font="bold "+font_size+"px sans-serif";
-		ctx.fillText("	"+this.nombre,this.x+5,this.y+font_size+2);//NAME
+		ctx.font="bold 20px sans-serif";
+		ctx.fillText("	"+this.nombre,this.x+5,this.y+22);//NAME
 		//--------------------------------vars-------------------------------------------------
 	}
 }

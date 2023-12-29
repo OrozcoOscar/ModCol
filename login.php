@@ -33,7 +33,7 @@ header("location:./home");
 				<input class="boton" type="submit" value="Continuar" >
 			</div>
 			<div>
-				<p>¿No tienes una cuenta?<a href="signup.php"> Regístrate aquí</a></p>
+				<p>¿No tienes una cuenta?<a href="signup.php"> Registrate aquí</a></p>
 			</div>
 
 			

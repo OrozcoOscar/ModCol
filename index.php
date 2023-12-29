@@ -24,7 +24,7 @@ header("location:./home");
             <header>
 
                 <nav>
-                    <a href="login.php" >Iniciar sesión</a>
+                    <a href="login.php" >Iniciar sesion</a>
                     <a href="signup.php" >Registrarse</a>
                     <a href="#contactos">Contacto</a>
                     

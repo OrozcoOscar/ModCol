@@ -1,5 +1,4 @@
 <?php 
-error_reporting(0);
 session_start();
 include "cn.php";
 $id=$_SESSION['user_code'];
@@ -7,7 +6,7 @@ if (empty($id)) {
 	echo "<script>window.location.href='../';</script>";
 }
 $_SESSION['model_code']="";
-$row=set_sql("SELECT id,correo,nombre FROM usuario WHERE id='$id'");
+$row=set_sql("SELECT id,correo,clave,nombre FROM usuario WHERE id='$id'");
 if(!$row){
 header("location:../login.php");
 }
@@ -27,7 +26,7 @@ header("location:../login.php");
 	<header>
 		<a href="#" class="logo"><img src="../imagenes/logo.jpg" alt=""><span>MODCOL</span></a>
 		<nav>
-                    <a href="perfil.php" >Perfil</a>
+                    <a href="#" >Perfil</a>
                     <a href="salir.php" >Salir</a>
                    
                 </nav>

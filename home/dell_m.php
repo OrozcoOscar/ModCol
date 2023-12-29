@@ -1,5 +1,4 @@
 <?php 
-error_reporting(0);
 try {
 session_start();
 } catch (Exception $e) {}

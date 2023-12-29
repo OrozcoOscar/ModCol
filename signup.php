@@ -22,7 +22,7 @@ header("location:./home");
 		<a href="index.html" class="logo"><img src="imagenes/logo.jpg" alt=""><span>MODCOL</span></a>
 		<nav>
                     <a href="index.php" >Inicio</a>
-                    <a href="login.php" >Iniciar Sesión</a>
+                    <a href="login.php" >Iniciar Sesion</a>
                 </nav>
 	</header>
 	<section class="contain">
